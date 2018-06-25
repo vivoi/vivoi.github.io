@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.main-header { grid-area: header; }
+.main-nav { grid-area: nav; }
+.main-art { grid-area: art; }
+.main-sect { grid-area: sect; }
+.main-aside { grid-area: aside; }
+.main-footer { grid-area: footer; }
+
+.wrap {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header header'
+    'nav nav nav nav nav nav nav'
+    'art sect sect sect sect sect aside'
+    'footer footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.main-header, .main-nav,.main-art,.main-sect,.main-aside,.main-footer {
+  background-color: rgba(255, 255, 255, 0.8);
+
+  padding:20px 0;
+
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="main-header">Header</header>
+  <nav class="main-nav">nav</nav>
+  <article class="main-art">article</article>  
+  <section class="main-sect">section</section>
+  <aside class="main-aside">aside</aside>
+  <Footer class="main-footer">Footer</Footer>
+</div>
+
+</body>
+</html>
