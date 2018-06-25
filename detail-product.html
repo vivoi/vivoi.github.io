@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7UP - Detail Product</title>
+
+    <link rel="stylesheet" href="css/simple-footer.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .flex-center {
+            align-items: center;
+            align-content: center;
+        }
+
+        .flex-justify-center {
+            justify-content: center;
+        }
+
+        .no-padding-margin {
+            padding: 0;
+            margin: 0;
+        }
+
+        .position-r {
+            position: relative;
+        }
+
+        .position-a {
+            position: absolute;
+        }
+
+
+        .main-nav {
+            width: 100%;
+            height: 60px;
+            box-shadow: 0 0 10px;
+            position: fixed;
+            z-index: 1;
+            background-color: #fff;
+
+        }
+
+        .logo {
+            flex: 0 10%;
+        }
+
+        .menu {
+            flex: 0 70%;
+        }
+
+        .main-menu {
+            list-style: none;
+        }
+
+        .sub-menu {
+            list-style: none;
+            display: none;
+            padding: 0;
+            z-index: 1;
+            margin-top: 10px;
+
+        }
+
+        .sub-menu-item {
+            width: 150px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 1px;
+
+        }
+
+        .sub-menu-item:hover {
+            background-color: #eee;
+        }
+
+        .menu-item:hover .sub-menu {
+            display: block;
+        }
+
+        .no-barba {
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: AmericanaBEx;
+            color: #000;
+            position: relative;
+            border-bottom: 1px dotted #000;
+
+
+        }
+
+        .no-barba::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            bottom: -1px;
+            transform: scale(0);
+            background-color: #000;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .no-barba:hover {
+            background-color: #eee;
+            border-bottom: none;
+
+        }
+
+        .no-barba:visited {
+            color: #000;
+        }
+
+        .no-barba:hover::before {
+            transform: scale(1);
+        }
+
+        .acc-manager {
+            padding: 10px 20px;
+            margin: 0;
+
+        }
+
+        .menu-item_button {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: limegreen;
+            border-style: none;
+            box-shadow: 0 0 5px limegreen;
+            font-family: AmericanaBEx;
+        }
+
+        .menu-item_button:hover {
+            background-color: lime;
+        }
+
+        .menu-item_button:active {
+            background-color: chartreuse;
+        }
+
+        .menu-item_button:visited {
+            color: #000;
+        }
+
+        .main-art {
+            background-image: url(img/slide-1bg.jpg);
+            min-height: 600px;
+        }
+
+
+        .main-content {
+            width: 85%;
+            height: 600px;
+            background-color: #000;
+            opacity: 0.1;
+            margin: 0 auto;
+        }
+
+        /*		import font face*/
+
+        @font-face {
+            font-family: CaviarDreams;
+            src: url(fonts/product/CaviarDreams.ttf);
+        }
+
+        @font-face {
+            font-family: CaviarDreamsBold;
+            src: url(fonts/product/CaviarDreams_Bold.ttf);
+        }
+		
+		@font-face {
+            font-family: AmericanaBEx;
+            src: url(fonts/product/AmericanaBEx.ttf);
+        }
+
+        /*		end import font face*/
+    </style>
+</head>
+
+<body class="no-padding-margin">
+    <div id="wrap" class="no-padding-margin">
+        <header class="main-header"></header>
+        <nav class="main-nav no-padding-margin flex flex-justify-center" data-module="nav">
+            <div class="logo flex flex-justify-center">
+                <a class="img-logo" href="#">
+                    <img src="img/logo-detail-product.png" alt="" width="150px">
+                </a>
+            </div>
+
+            <div class="menu no-padding-margin">
+                <ul class="main-menu flex flex-justify-center">
+                    <li class="menu-item">
+                        <a href="index.html" class="no-barba">Trang chủ</a>
+                    </li>
+                    <li class="menu-item position-r">
+                        <a href="#" class="no-barba">Liên hệ</a>
+
+                        <ul class="sub-menu position-a">
+                            <li class="sub-menu-item">
+                                <a href="#" class="no-barba">Điện thoại</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="no-barba">Email</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="no-barba">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="no-barba">Các sản phẩm</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="no-barba">Giới thiệu</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="no-barba">Giải thưởng</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="no-barba" href="#">Phân phối</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="no-barba">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="acc-manager flex flex-center">
+                <div>
+                    <a href="#" class="menu-item_button">Đăng nhập</a>
+                </div>
+            </div>
+            <div class="list-menu flex flex-center">
+                <a href="#">
+                    <img src="img/menu.png" alt="" height="32px">
+                </a>
+            </div>
+        </nav>
+        <article class="main-art no-padding-margin">
+            <div class="main-content">
+                xxxxxxxx
+            </div>
+        </article>
+        <footer class="main-footer">
+            <div class="content">
+                <div class="footer-grids">
+                    <div class="footer one">
+                        <h3>Về Công Ty 7UP Việt Nam</h3>
+                        <p>Nhãn hàng 7Up tổ chức buổi lễ khánh thành Công trình tô điểm Hồ Con Rùa tại Công trường Quốc tế. Đây là công trình tiếp theo của chiến dịch “7Up Tô Điểm Việt Nam” do 7Up thực hiện nhằm góp phần tô điểm các công trình công cộng tại Việt Nam trở nên trẻ trung, tươi mới, năng động và mang đậm chất riêng của giới trẻ Việt Nam hơn</p>
+                        <p class="adam">- J. Kuro Shinichi, CEO</p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="footer two">
+                        <h3>Kết nối với chúng tôi !</h3>
+                        <ul>
+                            <li><a class="fb" href="#"><i></i>Like us on Facebook</a></li>
+                            <li><a class="fb1" href="#"><i></i>Follow us on Twitter</a></li>
+                            <li><a class="fb2" href="#"><i></i>Add us on Google Plus</a></li>
+                            <li><a class="fb3" href="#"><i></i>Follow us on Dribbble</a></li>
+                            <li><a class="fb4" href="#"><i></i>Follow us on Pinterest</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer three">
+                        <h3>Contact Information</h3>
+                        <ul>
+                            <li>7UP Việt Nam <span>K82, Nguyễn Lương Bằng</span>Đà Nẵng.  </li>
+							<li>(+84) 967 283 227</li>
+                            <li><a href="mailto:info@example.com">contact@7up.com</a> </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="copy-right-grids">
+                    <div class="copy-left">
+                            <p class="footer-gd">© 2018 Simple Footer Widget. All Rights Reserved | Design by <a href="https://fb.com/kuro2404" target="_blank">J. Kuro</a></p>
+                    </div>
+                    <div class="copy-right">
+                        <ul>
+                            <li><a href="#">Company Information</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </footer>	
+    </div>
+</body>
+
+</html>

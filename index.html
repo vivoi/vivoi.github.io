@@ -1,43 +1,755 @@
 <!DOCTYPE html>
-<html>
+<html lang="en,vi">
+
 <head>
-<style>
-.main-header { grid-area: header; }
-.main-nav { grid-area: nav; }
-.main-art { grid-area: art; }
-.main-sect { grid-area: sect; }
-.main-aside { grid-area: aside; }
-.main-footer { grid-area: footer; }
+	<title>Blog 7UP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-.wrap {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header header'
-    'nav nav nav nav nav nav nav'
-    'art sect sect sect sect sect aside'
-    'footer footer footer footer footer footer footer';
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
-.main-header, .main-nav,.main-art,.main-sect,.main-aside,.main-footer {
-  background-color: rgba(255, 255, 255, 0.8);
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom Theme files -->
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/font-awesome.css" rel="stylesheet">
 
-  padding:20px 0;
-
-}
-</style>
+	<link href="css/blog-style.css" type="text/css" rel="stylesheet" media="all">
+	<!-- font-awesome icons -->
+	<link rel="stylesheet" href="css/jquery.gallery.css">
+	<!-- //Custom Theme files -->
+	<!-- js -->
+	<script src="js/blog/jquery-2.2.3.min.js"></script>
+	<!-- //js -->
+	<!-- web-fonts -->
+<!--	<link href="https://fonts.googleapis.com/css?family=Cormorant+Upright:300,400,500,600,700" rel="stylesheet">-->
+<!--	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">-->
+	<!-- //web-fonts -->
 </head>
+
 <body>
+	<!-- banner -->
+	<div class="w3ls-banner">
+		<div class="w3lsbanner-info">
+			<div class="header">
+				<div class="container">
+					<div class="header-left">
+						<div class="cssup-logo">
+							<h1>
+								<a href="#">
+									<img src="img/blog/logo.png">
+								</a>
+							</h1>
+						</div>
+					</div>
+					<div class="header-right">
+						<div class="agileinfo-social-grids">
+							<ul>
+								<li>
+									<a href="#">
+										<i class="fa fa-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-rss"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-vk"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="header-bottom">
+				<div class="container">
+					<div class="top-nav">
+						<nav class="navbar navbar-default">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li>
+										<a class="active list-border" href="index.html">Trang chủ</a>
+									</li>
+									<li>
+										<a href="#about" class="scroll">Giới thiệu</a>
+									</li>
+									<li>
+										<a href="#services" class="scroll">Dịch vụ</a>
+									</li>
+									<li>
+										<a href="#gallery" class="scroll">Các sản phẩm</a>
+									</li>
+									<li>
+										<a href="#team" class="scroll">Nhóm</a>
+									</li>
+									<li>
+										<a href="#news" class="scroll">Tin tức</a>
+									</li>
+									<li>
+										<a class="list-border1 scroll" href="#contact">Liên hệ</a>
+									</li>
+								</ul>
+								<div class="clearfix"> </div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="cssup-banner-info">
+				<div class="container">
+					<div class="cssup-banner-slider">
+						<div class="cssup-banner-top-slider">
+							<div class="slider">
+								<div class="callbacks_container"><a href="7up-chanh.html">
+									<ul class="rslides callbacks callbacks1" id="slider4">
+										<li>
+											<div class="w3ls-text">
+												<div class="w3ls-text-info">
+													<h2>Sáng khoải vị CHANH</h2>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="w3ls-text">
+												<div class="w3ls-text-info">
+													<h2>UP cùng hải sản</h2>
+												</div>
+											</div>
+										</li>
+									</ul></a>
+								</div>
+								<div class="clearfix"> </div>
+								<script src="js/blog/responsiveslides.min.js"></script>
+								<script>
+									// You can also use "$(window).load(function() {"
+									$(function () {
+										// Slideshow 4
+										$("#slider4").responsiveSlides({
+											auto: true,
+											pager: true,
+											nav: true,
+											speed: 500,
+											namespace: "callbacks",
+											before: function () {
+												$('.news').append("<li>before event fired.</li>");
+											},
+											after: function () {
+												$('.news').append("<li>after event fired.</li>");
+											}
+										});
 
-<div class="wrap">
-  <header class="main-header">Header</header>
-  <nav class="main-nav">nav</nav>
-  <article class="main-art">article</article>  
-  <section class="main-sect">section</section>
-  <aside class="main-aside">aside</aside>
-  <Footer class="main-footer">Footer</Footer>
-</div>
+									});
+								</script>
+								<!--banner Slider starts Here-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- about -->
+	<div id="about" class="about">
+		<div class="container">
+			<div class="agileits-title">
+				<h3>Về chúng tôi</h3>
+			</div>
+			<div class="w3l-about-grids">
+				<div class="col-md-6 w3ls-about-right">
+					<img src="img/blog/img1.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-6 w3ls-about-left">
+					<div class="agileits-icon-grid">
+						<div class="icon-left hvr-radial-out">
+							<i class="fa fa-cog" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+						  <h5>Năng suất chất lượng</h5>
+						  <p>7UP là một nhãn hiệu đồ uống nhẹ vị chanh không chứa caffein. Bản quyền nhãn hiệu thuộc về Dr Pepper Snapple Group của Mỹ và PepsiCo ở bên ngoài nước Mỹ.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="agileits-icon-grid">
+						<div class="icon-left hvr-radial-out">
+							<i class="fa fa-heart" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+						  <h5>Làm việc hết mình</h5>
+						  <p>7UP là một nhãn hiệu đồ uống nhẹ vị chanh không chứa caffein. Bản quyền nhãn hiệu thuộc về Dr Pepper Snapple Group của Mỹ và PepsiCo ở bên ngoài nước Mỹ.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="agileits-icon-grid">
+						<div class="icon-left hvr-radial-out">
+							<i class="fa fa-paper-plane" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+						  <h5>Luôn đem lại chất lượng và sáng tạo !</h5>
+						  <p>7UP là một nhãn hiệu đồ uống nhẹ vị chanh không chứa caffein. Bản quyền nhãn hiệu thuộc về Dr Pepper Snapple Group của Mỹ và PepsiCo ở bên ngoài nước Mỹ.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- Stats -->
+	<div class="stats">
+		<div class="stats-info agileits-cssup">
+			<div class="col-sm-3 col-xs-6 stats-grid w3lgrid1">
+				<div class="stats-img"><em class="fa fa-users" aria-hidden="true"></em></div>
+				<h5>Khách hàng</h5>
+				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='157000' data-delay='.5' data-increment="100">157000</div>
+			</div>
+			<div class="col-sm-3 col-xs-6 stats-grid w3lgrid2">
+				<div class="stats-img w3-agileits">
+					<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+				</div>
+				<h5>Thành viên</h5>
+				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='850' data-delay='8' data-increment="1">850</div>
+			</div>
+			<div class="col-sm-3 col-xs-6 stats-grid w3lgrid3">
+				<div class="stats-img w3-agileits">
+					<i class="fa fa-briefcase" aria-hidden="true"></i>
+				</div>
+				<h5>Dự án</h5>
+				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='80000' data-delay='.5' data-increment="100">80000</div>
+			</div>
+			<div class="col-sm-3 col-xs-6 stats-grid w3lgrid4">
+				<div class="stats-img w3-agileits"><em class="fa fa-trophy" aria-hidden="true"></em></div>
+				<h5>Giải thưởng</h5>
+				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='269' data-delay='8' data-increment="1">269</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- //Stats -->
+	<!-- services -->
+	<div id="services" class="services">
+		<div class="container">
+			<div class="agileits-title">
+				<h3>Dịch vụ</h3>
+			</div>
+			<div class="services-agileinfo">
+				<div class="col-sm-3 col-xs-6 services-w3grids">
+					<h5>1</h5>
+					<h6>Đại lý phân phối rộng khắp thế giới</h6>
+				</div>
+				<div class="col-sm-3 col-xs-6 services-w3grids">
+					<h5>2</h5>
+					<h6>Nguồn tài nguyên sản xuất dồi dào</h6>
+				</div>
+				<div class="col-sm-3 col-xs-6 services-w3grids">
+					<h5>3</h5>
+					<h6>Công thức 3 trong 1 đặc biệt, công thức độc quyền</h6>
+				</div>
+				<div class="col-sm-3 col-xs-6 services-w3grids">
+					<h5>4</h5>
+					<h6>Là nước uống xu thế của công nghiệp 4.0</h6>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //services -->
+	<!-- team -->
+	<div id="team" class="jarallax team">
+		<div class="team-dot">
+			<div class="container">
+				<div class="agileits-title w3title1">
+					<h3>Nhóm chúng tôi</h3>
+				</div>
+				<div class="agileits-team-grids">
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="img/blog/t1.jpg" alt="">
+							<div class="team-caption">
+								<h4>J. Kuro</h4>
+								<p>Shinichi</p>
+								<div class="agileinfo-social-grids">
+									<ul>
+										<li>
+											<a href="#">
+												<i class="fa fa-facebook"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-rss"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="img/blog/t2.jpg" alt="">
+							<div class="team-caption">
+								<h4>J. Kuro</h4>
+								<p>Shinichi</p>
+								<div class="agileinfo-social-grids">
+									<ul>
+										<li>
+											<a href="#">
+												<i class="fa fa-facebook"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-rss"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="img/blog/t3.jpg" alt="">
+							<div class="team-caption">
+								<h4>J. Kuro</h4>
+								<p>Shinichi</p>
+								<div class="agileinfo-social-grids">
+									<ul>
+										<li>
+											<a href="#">
+												<i class="fa fa-facebook"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-rss"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="img/blog/t4.jpg" alt="">
+							<div class="team-caption">
+								<h4>J. Kuro</h4>
+								<p>Shinichi</p>
+								<div class="agileinfo-social-grids">
+									<ul>
+										<li>
+											<a href="#">
+												<i class="fa fa-facebook"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-rss"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //team -->
+	<!-- news -->
+	<div id="news" class="w3-news">
+		<div class="container">
+			<div class="agileits-title">
+				<h3>Tin tức</h3>
+			</div>
+			<div class="news-info">
+				<div class="col-md-6 event-grids">
+					<div class="cssup-text">
+						<h4>10
+							<span>Nov</span>
+						</h4>
+						<h6>
+							<a href="#" data-toggle="modal" data-target="#myModal">Ra mắt sản phẩm mới</a>
+						</h6>
+						<div class="clearfix"> </div>
+					</div>
+					<p>7UP là một nhãn hiệu đồ uống nhẹ vị chanh không chứa caffein. Bản quyền nhãn hiệu thuộc về Dr Pepper Snapple Group của Mỹ và PepsiCo ở bên ngoài nước Mỹ. Logo 7Up bao gồm một chấm đỏ nằm giữa "7" và "Up".</p>
+				</div>
+				<div class="col-md-6 event-grids">
+					<div class="cssup-text">
+						<h4>20
+							<span>Dec</span>
+						</h4>
+						<h6>
+							<a href="#" data-toggle="modal" data-target="#myModal">Có thêm 200 công ty hợp tác</a>
+						</h6>
+						<div class="clearfix"> </div>
+					</div>
+					<p>7UP là một nhãn hiệu đồ uống nhẹ vị chanh không chứa caffein. Bản quyền nhãn hiệu thuộc về Dr Pepper Snapple Group của Mỹ và PepsiCo ở bên ngoài nước Mỹ. Logo 7Up bao gồm một chấm đỏ nằm giữa "7" và "Up".</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="news-info news-agileinfo2">
+				<div class="col-md-6 event-grids">
+					<div class="cssup-text">
+						<h4>05
+							<span>Jan</span>
+						</h4>
+						<h6>
+							<a href="#" data-toggle="modal" data-target="#myModal">Cổ phiếu Quý 3 tăng 200%</a>
+						</h6>
+						<div class="clearfix"> </div>
+					</div>
+					<p>7UP là một nhãn hiệu đồ uống nhẹ vị chanh không chứa caffein. Bản quyền nhãn hiệu thuộc về Dr Pepper Snapple Group của Mỹ và PepsiCo ở bên ngoài nước Mỹ. Logo 7Up bao gồm một chấm đỏ nằm giữa "7" và "Up".</p>
+				</div>
+				<div class="col-md-6 event-grids">
+					<div class="cssup-text">
+						<h4>18
+							<span>Feb</span>
+						</h4>
+						<h6>
+							<a href="#" data-toggle="modal" data-target="#myModal">Sản phẩm mang tính đột phá</a>
+						</h6>
+						<div class="clearfix"> </div>
+					</div>
+					<p>7UP là một nhãn hiệu đồ uống nhẹ vị chanh không chứa caffein. Bản quyền nhãn hiệu thuộc về Dr Pepper Snapple Group của Mỹ và PepsiCo ở bên ngoài nước Mỹ. Logo 7Up bao gồm một chấm đỏ nằm giữa "7" và "Up".</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //news -->
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Một sản phẩm mới được ra mắt</h4>
+				</div>
+				<div class="modal-body">
+					<div class="agileits-cssup-info">
+						<img src="img/blog/1.jpg" alt="" />
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- gallery -->
+	<div id="gallery" class="gallery">
+		<div class="container">
+			<div class="agileits-title">
+				<h3>Các sản phẩm</h3>
+			</div>
+		</div>
+		<div class="w3_agile_gallery_grids">
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid">
+				<div class="w3_agileits_gallery_grid">
+					<a href="img/blog/g1.jpg">
+						<div class="view effect">
+							<img src="img/blog/g1.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>Xem ngay</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid">
+				<div class="w3_agileits_gallery_grid">
+					<a href="img/blog/g2.jpg">
+						<div class="view effect">
+							<img src="img/blog/g2.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>Xem ngay</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid">
+				<div class="w3_agileits_gallery_grid">
+					<a href="img/blog/g3.jpg">
+						<div class="view effect">
+							<img src="img/blog/g3.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>Xem ngay</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid">
+				<div class="w3_agileits_gallery_grid">
+					<a href="img/blog/g4.jpg">
+						<div class="view effect">
+							<img src="img/blog/g4.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>Xem ngay</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid">
+				<div class="w3_agileits_gallery_grid">
+					<a href="img/blog/g5.jpg">
+						<div class="view effect">
+							<img src="img/blog/g5.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>Xem ngay</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid">
+				<div class="w3_agileits_gallery_grid">
+					<a href="img/blog/g6.jpg">
+						<div class="view effect">
+							<img src="img/blog/g6.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>Xem ngay</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<script type="text/javascript" src="js/blog/jquery.gallery.js"></script>
+		<script>
+			$(function () {
+				$('.w3_agile_gallery_grids').createSimpleImgGallery();
+			});
+		</script>
+	</div>
+	<!-- //gallery -->
+	<!-- contact -->
+	<div id="contact" class="contact agileits">
+		<div class="container">
+			<div class="agileits-title">
+				<h3>Liên hệ chúng tôi</h3>
+			</div>
+			<div class="contact-agileinfo contact-form wthree">
+				<form action="#" method="post">
+					<input type="text" name="Name" placeholder="Tên" required="">
+					<input class="email" type="email" name="Email" placeholder="Email" required="">
+					<input type="text" name="Number" placeholder="Điện thoại" required="">
+					<textarea placeholder="Nội dung" name="Message" required=""></textarea>
+					<input type="submit" value="Gửi">
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- //contact -->
+	<!-- map -->
+	<div class="map cssup">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555"></iframe>
+	</div>
+	<!-- //map -->
+	<!-- address -->
+	<div class="address">
+		<div class="container">
+			<div class="address-grids">
+				<div class="col-md-6 address-left">
+					<h5>
+						<a href="#">Sẵn sàng cho sản phẩm của chúng tôi</a>
+					</h5>
+					<p>7UP là một nhãn hiệu đồ uống nhẹ vị chanh không chứa caffein. Bản quyền nhãn hiệu thuộc về Dr Pepper Snapple Group của Mỹ và PepsiCo ở bên ngoài nước Mỹ. Logo 7Up bao gồm một chấm đỏ nằm giữa "7" và "Up".</p>
+				</div>
+				<div class="col-md-6 address-right">
+					<div class="address-w3grids">
+						<div class="col-xs-2 contact-grdl">
+							<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+						</div>
+						<div class="col-xs-10 contact-grdr">
+						  <p>+84 967 283 227</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="address-w3grids">
+						<div class="col-xs-2 contact-grdl">
+							<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+						</div>
+						<div class="col-xs-10 contact-grdr">
+						  <p>K82 Nguyễn Lương Bằng, Q. Liên Chiểu, Đà Nẵng.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="address-w3grids">
+						<div class="col-xs-2 contact-grdl">
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						</div>
+						<div class="col-xs-10 contact-grdr">
+							<p>
+								<a href="mailto:contact@7up.com">contact@7up.com</a>
+							</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //address -->
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-4 agileinfo_footer_grid">
+				<h3>Đăng ký</h3>
+				<p>Nhận thông tin về sản phẩm mới !</p>
+				<form action="#" method="post">
+					<input type="email" name="Email" placeholder="Email" required="">
+					<input type="submit" value="Send">
+				</form>
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid">
+				<h3>Tin tức trên Twitter</h3>
+				<ul class="w3agile_footer_grid_list">
+					<li>Trang chia sẻ phần mêm
+						<a href="#">http://nccsupports.com</a> chia sẻ bởi J. Kuro
+						<span>
+							<i class="fa fa-twitter" aria-hidden="true"></i>02 days ago</span>
+					</li>
+					<li>Trang kiến thức website
+						<a href="#">http://hoclom.com</a> là một trang chia sẻ kiến thức lập trình.
+						<span>
+							<i class="fa fa-twitter" aria-hidden="true"></i>03 days ago</span>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid">
+				<h3>Social Media</h3>
+				<div class="agileinfo-social-grids footer-w3icons">
+					<ul>
+						<li>
+							<a href="#">
+								<i class="fa fa-facebook"></i>- Facebook</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-twitter"></i>- Twitter</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-rss"></i> - RSS</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-vk"></i>- VK</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- copy-right -->
+	<div class="w3agile_copy_right">
+		<div class="container">
+			<p>© 2018 7UP. All Rights Reserved | Design by
+				<a href="https://fb.com/kuro2404">J. Kuro</a>
+			</p>
+		</div>
+	</div>
+	<!-- //copy-right -->
+	<!-- jarallax -->
+	<script src="js/blog/SmoothScroll.min.js"></script>
+	<script src="js/blog/jarallax.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- //jarallax -->
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="js/blog/move-top.js"></script>
+	<script type="text/javascript" src="js/blog/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
 
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->
+	<!-- Bootstrap core JavaScript-->
+	<script src="js/blog/bootstrap.js"></script>
 </body>
+
 </html>

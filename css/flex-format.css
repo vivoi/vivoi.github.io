@@ -1,0 +1,40 @@
+/* format flex */
+
+.flex {
+	display: flex;
+}
+
+.flex-cloumn {
+	flex-direction: column;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-justify-center {
+	justify-content: center;
+}
+
+.flex-align-center {
+	align-items: center;
+}
+
+.flex-align-start {
+    align-items: flex-start;
+}
+
+.flex-align-end {
+    align-items: flex-end;
+}
+
+.flex-justify-left {
+    justify-content: left;
+
+}
+
+.flex-justify-right {
+    justify-content: right;
+}
+
+/* /end format flex/ */

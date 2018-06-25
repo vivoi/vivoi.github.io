@@ -1,0 +1,124 @@
+.no-padding-margin {
+	padding: 0;
+	margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.multi-product {
+	margin: 20px;
+
+}
+
+.multi-product-item {
+	box-shadow: 0 0 5px #41B444;
+	width: 23%;
+	height: 100%;
+	margin: 0 1% 0 1%;
+}
+
+.multi-product-item img {
+	width: 100%;
+	cursor: zoom-in;
+}
+
+.multi-product-item img:hover {
+	opacity: 0.9;
+}
+
+.m-p-item-1, .m-p-item-2, .m-p-item-3, .m-p-item-4 {
+	height: 100%;
+	/* background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; */
+	
+}
+
+.m-p-item-1 {
+    /* background-image: url(../img/multi/green_dew.jpg); */
+}
+
+.m-p-item-2 {
+	/* background-image: url(../img/multi/ice.jpg); */
+}
+
+.m-p-item-3 {
+	/* background-image: url(../img/multi/kickstart-pod.jpg); */
+}
+
+.m-p-item-4 {
+	/* background-image: url(../img/multi/label-series-2018.jpg); */
+}
+.product-description {
+	padding: 25px;
+	background-image: url(../img/multi/texture-light.jpg);
+	background-size: cover;
+	margin: 0;
+}
+
+.product-description h3, .product-description h2 {
+	font-family: StencilStd;
+	margin: 0;
+}
+.btn-get-product {
+	background-color: #41B444;
+	height: 75px;
+}
+
+.btn-get-product div {
+/*	padding: 10px;*/
+	color: #fff;
+}
+
+.btn-get-product i {
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.btn-get-product span {
+	padding: 10px;
+	font-family: Hanzel;
+	
+}
+
+.btn-get-product img {
+	width: 10%;
+}
+
+.link-product {
+	text-decoration: none;
+}
+
+@font-face {
+	font-family: EricssonCapital;
+	src: url(../fonts/EricssonCapital.ttf)
+}
+
+@font-face {
+	
+	font-family: Hanzel;
+	src: url(../fonts/Hanzel.ttf)
+}
+
+
+@font-face {
+	font-family: StencilStd;
+	src: url(../fonts/StencilStd.otf);
+}

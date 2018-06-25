@@ -1,0 +1,250 @@
+ /* import font face */
+
+ @font-face {
+   font-family: StencilStd;
+   src: url(../fonts/StencilStd.otf);
+ }
+
+ @font-face {
+   font-family: AmericanaBEx;
+   src: url(../fonts/AmericanaBEx.ttf);
+ }
+
+ @font-face {
+   font-family: YoungSerifttf;
+   src: url(../fonts/youngserif-regular.ttf);
+ }
+
+ @font-face {
+   font-family: Bell;
+   src: url(../fonts/main/Bell.ttf);
+ }
+
+ @font-face {
+   font-family: Sharnay;
+   src: url(../fonts/main/Sharnay.ttf);
+ }
+
+ @font-face {
+   font-family: EricssonCapital;
+   src: url(../fonts/main/EricssonCapital.ttf);
+ }
+
+ /* end font */
+
+ /* write css */
+
+ body {
+   margin: 0;
+   padding: 0;
+ }
+
+ .main-header {
+   height: 70px;
+   width: 100%;
+   background-color: white;
+   box-shadow: 0 0 10px black;
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+   position: fixed;
+   display: -webkit-flex;
+   display: flex;
+   z-index: 1;
+ }
+
+ .main-header>div {}
+
+ .logo-text {
+   font-family: StencilStd, sans-serif;
+   font-size: 3.5em;
+   /* margin-left: 75px; */
+   flex: 0 15%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .logo-text a {
+   text-decoration: none;
+   color: #41B444;
+   /* -webkit-text-stroke: 1px white; */
+   text-shadow: 0 0 5px #41B444;
+ }
+
+ .logo-text a:visited {
+   color: #41B444;
+ }
+
+ .main-nav {
+   background: transparent;
+   pointer-events: all;
+   display: inline-block;
+   position: static;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 70%;
+ }
+
+ .main-nav_list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   text-indent: 0;
+   position: relative;
+ }
+
+ .main-nav, .main-nav_list {}
+
+ .main-nav_list-item {
+   flex-direction: row;
+   display: inline-flex;
+   position: relative;
+ }
+
+ .main-nav_list-link {
+   text-decoration: none;
+   font-family: AmericanaBEx, Helvetica, sans-serif;
+   padding: 15px;
+   border-radius: 2px;
+   border-bottom: 1px double;
+ }
+
+ .main-nav_list-link:hover {
+   background-color: #41B444;
+	 color: #fff;
+ }
+
+ .main-header_main-cart {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: YoungSerifotf, Helvetica, sans-serif;
+   flex: 0 15%;
+ }
+
+ #main-cart {
+   border: 1px solid white;
+   background-color: #41B444;
+   padding: 10px 20px;
+   border-radius: 30px;
+   box-shadow: 0 0 5px #41B444;
+   pointer-events: all;
+ }
+
+ #main-cart:hover {
+   background-color: limegreen;
+ }
+
+ #main-cart a {
+   color: #fff;
+ }
+
+ .main-nav_list-link, .show-hide-cart {
+   color: #000;
+ }
+
+ .show-hide-cart {
+   text-decoration: none;
+ }
+
+ /* content */
+
+ .main-article {
+   padding: 0;
+   margin: 0 0 0 0;
+   min-height: 750px;
+   width: 100%;
+   background-clip: ;
+   z-index: 0;
+   position: relative;
+ }
+
+ footer {
+   z-index: 0;
+ }
+
+ /* view-art */
+
+ .video-background {
+   width: 100%
+ }
+
+ .video-background video {
+   width: 100%;
+   height: 100%;
+ }
+
+ .video-background, .container {
+   position: absolute;
+ }
+
+ .container {
+   margin: 0 auto;
+   width: 80%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(65, 180, 68, .2);
+   /*	align*/
+   left: 50%;
+   transform: translateX(-50%);
+ }
+
+ .container-item {
+   /* Padding is used for smaller screens */
+   padding: 30px;
+   text-align: center;
+   opacity: 1;
+ }
+
+ .container-item h1 {
+   font-family: Sharnay;
+   font-size: 2em;
+   color: #41B444;
+ }
+.container-item h3 {
+	color:#fff;
+}
+ .container-item h3>span {
+   font-style: italic;
+   font-family: Sharnay;
+   color: #41B444;
+ }
+
+ .container-item>p {
+   text-align: justify;
+ }
+
+ .btn {
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin: 1rem;
+   text-align: center;
+   user-select: none;
+   border: none;
+   box-shadow: 0 0 5px #41B444;
+   padding: .75rem 1.25rem;
+   font-size: 1rem;
+   border-radius: .25rem;
+   transition: all .2s ease-in-out;
+ }
+
+ .btn.btn-primary {
+   color: #fff;
+   background-color: #41B444;
+   border-color: #666;
+   cursor: pointer;
+ }
+
+ .btn.btn-primary:hover {
+   color: #fff;
+   background-color: limegreen;
+   border-color: #666;
+ }
+
+ /* end view art */
